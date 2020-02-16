@@ -36,6 +36,8 @@ Borrar la rama:
 - git branch -d <nombre_rama>
 
 Por ultimo subir los cambios de la rama:
+PARA SUBIR TODOS LOS CAMBIOS, ARCHIVOS ETC, SE DEBEN HACER LOS PASOS
+NORMALES (ADD,COMMIT Y PUSH)
 - git push origin <nombre_rama>
 
 ------------------------------------------------------------------------
