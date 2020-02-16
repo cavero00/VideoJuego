@@ -1,4 +1,8 @@
+------------------------------------------------------------------------
+
 Para subir cosas al repo:
+
+------------------------------------------------------------------------
 
 Generar el repositorio en local,¿ solo una vez? --> si
 - git init
@@ -10,4 +14,87 @@ Luego se llevan los archivos al repositorio para control de cambios
 - git commit -m "mensaje"
 
 Se suben los cambios al repo
-- git push -u <rama>
+- git push origin <rama_sobre_la_que_subir_cambios>
+
+
+------------------------------------------------------------------------
+
+Para crear una rama nueva
+
+------------------------------------------------------------------------
+
+Crear una rama nueva y moverse a ella:
+- git checkout -b <nombre_rama>
+
+Cambiar a una rama;
+- git chechout <nombre_rama>
+
+Borrar la rama:
+- git branch -d <nombre_rama>
+
+Por ultimo subir los cambios de la rama:
+- git push origin <nombre_rama>
+
+------------------------------------------------------------------------
+
+Actualizar y fusionar el repo
+
+------------------------------------------------------------------------
+
+Para actualizar el repo al ultimo commit:
+- git pull
+
+En tu directorio de trabajo para bajar y fusionar los cambios remotos.
+Para fusionar otra rama a tu rama activa (por ejemplo master):
+- git merge <nombre_rama>
+
+Desafortunadamente, no siempre será posible y se podrán producir 
+conflictos. Tú eres responsable de fusionar esos conflictos manualmente 
+al editar los archivos mostrados por git. Después de modificarlos, 
+necesitas marcarlos como fusionados con:
+- git add <filename>
+
+Para revisar los cambios entre archivos se puede usar:
+- git diff <source_branch> <target_branch>
+
+------------------------------------------------------------------------
+
+Etiquetas
+
+------------------------------------------------------------------------
+Se recomienda crear etiquetas para nueva version del SW, para ello:
+- git tag <etiqueta(version)> <id_commit>
+
+Para obtener el id del commit se usa:
+- git log
+
+------------------------------------------------------------------------
+
+Reemplaza cambios locales
+
+------------------------------------------------------------------------
+En caso de que hagas algo mal (lo que seguramente nunca suceda ;) puedes
+ reemplazar cambios locales usando el comando
+- git checkout -- <filename>
+
+Este comando reemplaza los cambios en tu directorio de trabajo con el 
+último contenido de HEAD. Los cambios que ya han sido agregados al Index,
+así como también los nuevos archivos, se mantendrán sin cambio.
+
+Por otro lado, si quieres deshacer todos los cambios locales y commits, 
+puedes traer la última versión del servidor y apuntar a tu copia local 
+principal de esta forma
+- git fetch origin
+- git reset --hard origin/master
+
+------------------------------------------------------------------------
+
+Cosas utiles
+
+------------------------------------------------------------------------
+
+Interfaz grafica:
+- gitk
+
+Colores especiales para la consola
+- git config color.ui true
