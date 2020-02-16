@@ -29,6 +29,9 @@ Crear una rama nueva y moverse a ella:
 Cambiar a una rama;
 - git chechout <nombre_rama>
 
+Para ver la rama en la que se encuentra:
+- git branch
+
 Borrar la rama:
 - git branch -d <nombre_rama>
 
