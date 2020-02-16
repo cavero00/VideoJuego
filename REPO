@@ -5,6 +5,7 @@ Para subir cosas al repo:
 ------------------------------------------------------------------------
 
 Generar el repositorio en local,¿ solo una vez? --> si
+Inicializa el lugar de un repositorio
 - git init
 
 Se agregan todos los archivos al "staging area", registrar cambios
@@ -45,6 +46,9 @@ NORMALES (ADD,COMMIT Y PUSH)
 Actualizar y fusionar el repo
 
 ------------------------------------------------------------------------
+
+Para ver informacion sobre el estado del repositorio:
+- git status
 
 Para actualizar el repo al ultimo commit:
 - git pull
