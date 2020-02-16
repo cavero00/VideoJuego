@@ -1,0 +1,15 @@
+Para subir cosas al repo:
+
+Generar el repositorio en local,¿ solo una vez?
+- git init
+
+Se agregan todos los archivos al "staging area"
+- git add .
+
+Luego se llevan los archivos al repositorio para control de cambios
+- git commit -m "mensaje"
+
+Se suben los cambios al repo
+- git push -u <tipo rama>
+		- master
+		- otra
