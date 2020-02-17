@@ -30,6 +30,10 @@ VECTOR3D_H = $(PATH_CLASSES)Vector3D.h
 CUADRO_SELECT_H = $(PATH_CLASSES)CuadradoSelect.h
 LIST_MIESFERA_H = $(PATH_CLASSES)ListaMiEsferas.h
 
+CPP_S = $(wildcard $(PATH_CLASSES)*.cpp)
+O_S =  $(addprefix $(PATH_BIN), $(notdir $(CPP_S:.cpp=.o)))
+H_S = $(wildcard $(PATH_CLASSES)*.h)
+
 all:
 	make ProgramEsfera
 	make clean
