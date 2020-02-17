@@ -21,6 +21,13 @@ void ListaMiEsferas::Mueve()
 		lista[i]->Mueve(); 
 
 }
+
+void ListaMiEsferas::SetNewPosition(Vector3D nPos)
+{
+	for(int i=0;i<numero;i++)
+		lista[i]->SetNewPosition(nPos); 
+}
+
 void ListaMiEsferas::Eliminar(MiEsfera *mes)
 {
 	for(int i=0;i<numero;i++)

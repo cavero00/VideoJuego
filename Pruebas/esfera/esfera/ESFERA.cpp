@@ -90,7 +90,9 @@ void OnKeyboardDown(unsigned char key, int x_t, int y_t)
 
 void OnTimer(int value)
 {
-	//mundo.Mueve(0.025);
+	//EL MOVIMIENTO DE LOS OBJETOS ESTA REALIZADO PARA EL PRIMER CUADRANTE
+	//De esta forma el calculo de posiciones, angulos, etc es mas sencillo
+	mundo.Mueve(0.025);
 	
 	//no borrar estas lineas 
 	glutTimerFunc(25,OnTimer,0); 
@@ -108,8 +110,7 @@ void OnMouseMove(int button, int state, int x, int y){
 	if (click==0)//Deteccion del flanco positivo al pulsar el raton, sino detecta el flanco positivo y negativo
 	{
 		click=1;
-		mundo.ActivaRaton(x,y);	
-		mundo.ControlRaton(button);
+		mundo.ControlRaton(button,x,y);
 		//cout<<"Tecla del raton: "<<button<<"\n";
 	}
 	else

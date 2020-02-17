@@ -15,4 +15,5 @@ public:
 	~Vector3D(void);
 
 	void PosicionRaton(int x,int y,Vector3D posInicial);//Calcula la posicion del raton en la pantalla
+	Vector3D VectorUnitario(Vector3D fin);
 };

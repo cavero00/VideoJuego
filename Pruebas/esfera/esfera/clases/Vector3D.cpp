@@ -9,6 +9,24 @@ void Vector3D::PosicionRaton(int x,int y,Vector3D posInicial)
 	this->z=0.0f;
 }
 
+Vector3D Vector3D::VectorUnitario(Vector3D fin)
+{
+	Vector3D vector;
+	float modulo;
+
+	vector.x = fin.x - this->x;
+	vector.y = fin.y - this->y;
+	vector.z = fin.z - this->z;
+
+	modulo = sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
+
+	vector.x/=modulo;
+	vector.y/=modulo;
+	vector.z/=modulo;
+
+	return(vector);
+}
+
 Vector3D::Vector3D(float ix,float iy,float iz)
 {
 	x=ix;

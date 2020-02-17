@@ -2,6 +2,9 @@
 
 #include "./Vector3D.h"
 #include <GL/glut.h>
+#include <iostream>
+
+using namespace std;
 
 class MiEsfera{
 private:
@@ -10,7 +13,8 @@ private:
 	unsigned char verde;
 	unsigned char azul;
 	Vector3D posicion;
-	int seleccionable = 1;
+	int seleccionable;
+	Vector3D newPosicion;
 
 public:
 	MiEsfera(void);
@@ -19,6 +23,7 @@ public:
 	void SetRadio(float r);
 	void SetColor(unsigned char r,unsigned char v,unsigned char a);
 	void SetPosicion(float ix,float iy,float iz);
+	void SetNewPosition(Vector3D nPos);
 
 	void Dibuja();
 	void Mueve();

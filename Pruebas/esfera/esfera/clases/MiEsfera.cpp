@@ -28,9 +28,38 @@ void MiEsfera::Dibuja()
 	glTranslatef(-posicion.x,-posicion.y,-posicion.z);
 }
 
+void MiEsfera::SetNewPosition(Vector3D nPos)
+{
+	newPosicion.x = nPos.x;
+	newPosicion.y = nPos.y;
+	newPosicion.z = nPos.z;
+}
+
 void  MiEsfera::Mueve()
 {	
+	if(posicion.x != newPosicion.x)
+	{
+		if(posicion.x < newPosicion.x)
+			posicion.x = posicion.x + 0.025 * newPosicion.x;
+		if(posicion.x > newPosicion.x)
+			posicion.x = posicion.x - 0.025 * newPosicion.x;
+	}
 
+	if(posicion.y != newPosicion.y)
+	{
+		if(posicion.y < newPosicion.y)
+			posicion.y = posicion.y + 0.025 * newPosicion.y;
+		if(posicion.y > newPosicion.y)
+			posicion.y = posicion.y - 0.025 * newPosicion.y;
+	}
+
+	if(posicion.z != newPosicion.z)
+	{
+		if(posicion.z < newPosicion.z)
+			posicion.z = posicion.z + 0.025 * newPosicion.z;
+		if(posicion.z > newPosicion.z)
+			posicion.z = posicion.z - 0.025 * newPosicion.z;
+	}
 }
 
 MiEsfera::MiEsfera(void)
@@ -38,10 +67,15 @@ MiEsfera::MiEsfera(void)
 	rojo = 255;
 	verde = 0;
 	azul = 0;
-	radio = 10.0;
-	posicion.x=0;
-	posicion.y=0;
-	posicion.z=0;
+	radio = 10.0f;
+	posicion.x=0.0f;
+	posicion.y=0.0f;
+	posicion.z=0.0f;
+
+	seleccionable = 1;
+	newPosicion.x = posicion.x;
+	newPosicion.y = posicion.y;
+	newPosicion.z = posicion.z;
 }
 
 MiEsfera::~MiEsfera(void)

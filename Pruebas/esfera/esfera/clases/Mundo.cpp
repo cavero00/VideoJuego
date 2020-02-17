@@ -63,6 +63,8 @@ void Mundo::ActivaRaton(int x, int y)
 {
 	//Posicion del raton al hacer click
 	posCursorClick.PosicionRaton(x,y,posObservador);
+	Esferas.SetNewPosition(posCursorClick);
+	cout<<"Nueva posicion x: "<<posCursorClick.x<<" y: "<<posCursorClick.y<<" z: "<<posCursorClick.z<<"\n";
 }
 
 void Mundo::PasivaRaton(int x, int y)
@@ -71,16 +73,22 @@ void Mundo::PasivaRaton(int x, int y)
 	posCursorActual.PosicionRaton(x,y,posObservador);
 }
 
-void Mundo::ControlRaton(int button)
+void Mundo::ControlRaton(int button,int x,int y)
 {
 	//Gestion de los botones del raton
 	switch(button)
 	{
 		//Boton izquierdo
+		//Gestiona:
+		//	- Movimiento de objetos
+		//	- Sleccion de objetos
 		case 0:
-			
+			//Accion de controlar la posicion del raton
+			this->ActivaRaton(x,y);
+
+			//Seteamos los bordes del cuadrado de seleccion
 			if(click == 0)
-			{		
+			{								
 				cuadroSelect.SetIniEsquinas(0);
 				cuadroSelect.SetEsquinaSup(posCursorClick);			
 				click = 1;

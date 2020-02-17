@@ -11,6 +11,7 @@ public:
 	bool Agregar(MiEsfera *mes);
 	void Dibuja();
 	void Mueve();
+	void SetNewPosition(Vector3D nPos);
 	void Eliminar(MiEsfera *mes);
 	void Eliminar(int index);
 	MiEsfera *GetMiEsfera(int i);

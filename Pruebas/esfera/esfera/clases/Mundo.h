@@ -38,5 +38,5 @@ public:
 	void Mueve(float t);//Mueve los objetos
 	void ActivaRaton(int x, int y);//obtiene la posicion del raton al hacer click
 	void PasivaRaton(int x,int y);//Obtiene la posicion del raton siempre
-	void ControlRaton(int button);//Controla los botones del raton
+	void ControlRaton(int button,int x,int y);//Controla los botones del raton
 };
