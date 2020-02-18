@@ -4,10 +4,10 @@ void Mundo::Inicializa()
 {
 	//Inicializamos de forma dinamica los objetos en el mundo
 	MiEsfera *mes = new MiEsfera(); mes->SetRadio(5.0f);mes->SetPosicion(20.0f,0.0f,0.0f);
-		mes->SetColor(255,0,255);Esferas.Agregar(mes);
+		mes->SetColor(255,0,255);esferas.Agregar(mes);
 
 	MiEsfera *mes2 = new MiEsfera(); mes2->SetRadio(10.0f);mes2->SetPosicion(0.0f,0.0f,0.0f);
-		mes2->SetColor(255,0,255);Esferas.Agregar(mes2);
+		mes2->SetColor(255,0,255);esferas.Agregar(mes2);
 }
 
 void Mundo::Dibuja()
@@ -18,7 +18,7 @@ void Mundo::Dibuja()
 		0.0f,1.0f,0.0f);	
 
 	//Se dibujan todos los elementos del mundo
-	Esferas.Dibuja();
+	esferas.Dibuja();
 
 	if(cuadroSelect.GetIniEsquinas() != 0)
 		cuadroSelect.Dibuja();
@@ -26,7 +26,9 @@ void Mundo::Dibuja()
 
 void Mundo::Mueve(float t)
 {
-	Esferas.Mueve();
+	esferas.Mueve();
+
+	listaInteraccion.ListasSeleccion(esferas,cuadroSelect);
 }
 
 void Mundo::Tecla(unsigned char key)
@@ -63,8 +65,8 @@ void Mundo::ActivaRaton(int x, int y)
 {
 	//Posicion del raton al hacer click
 	posCursorClick.PosicionRaton(x,y,posObservador);
-	Esferas.SetNewPosition(posCursorClick);
-	cout<<"Nueva posicion x: "<<posCursorClick.x<<" y: "<<posCursorClick.y<<" z: "<<posCursorClick.z<<"\n";
+	esferas.SetNewPosition(posCursorClick);
+	//cout<<"Nueva posicion x: "<<posCursorClick.x<<" y: "<<posCursorClick.y<<" z: "<<posCursorClick.z<<"\n";
 }
 
 void Mundo::PasivaRaton(int x, int y)
@@ -139,6 +141,8 @@ Mundo::Mundo(void)
 	posCursorClick.z = 0.0f;
 
 	posCursorActual.z = 0.0f;
+
+	click = 0.0f;
 }
 
 Mundo::~Mundo(void)

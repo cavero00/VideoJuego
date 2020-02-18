@@ -19,6 +19,18 @@ void MiEsfera::SetPosicion(float ix,float iy,float iz)
 	posicion.z=0;
 }
 
+void MiEsfera::SetSeleccionado(bool select)
+{
+	cout<<"seleccionado-- "<<seleccionado<<"\n";
+	seleccionado = select;
+}
+
+bool MiEsfera::GetSeleccionado()
+{
+	cout<<"seleccionado-- "<<seleccionado<<"\n";
+	return(seleccionado);
+}
+
 void MiEsfera::Dibuja()
 {
 	//Dibujar una esfera
@@ -32,7 +44,7 @@ void MiEsfera::SetNewPosition(Vector3D nPos)
 {
 	newPosicion.x = nPos.x;
 	newPosicion.y = nPos.y;
-	newPosicion.z = nPos.z;
+	newPosicion.z = 0.0f;
 }
 
 void  MiEsfera::Mueve()
@@ -41,7 +53,7 @@ void  MiEsfera::Mueve()
 	{
 		if(posicion.x < newPosicion.x)
 			posicion.x = posicion.x + 0.025 * newPosicion.x;
-		if(posicion.x > newPosicion.x)
+		else if(posicion.x > newPosicion.x)
 			posicion.x = posicion.x - 0.025 * newPosicion.x;
 	}
 
@@ -49,17 +61,18 @@ void  MiEsfera::Mueve()
 	{
 		if(posicion.y < newPosicion.y)
 			posicion.y = posicion.y + 0.025 * newPosicion.y;
-		if(posicion.y > newPosicion.y)
+		else if(posicion.y > newPosicion.y)
 			posicion.y = posicion.y - 0.025 * newPosicion.y;
 	}
 
-	if(posicion.z != newPosicion.z)
+	//Que los objetos se mueven en el eje z no es el objetivo
+	/*if(posicion.z != newPosicion.z)
 	{
 		if(posicion.z < newPosicion.z)
 			posicion.z = posicion.z + 0.025 * newPosicion.z;
-		if(posicion.z > newPosicion.z)
+		else if(posicion.z > newPosicion.z)
 			posicion.z = posicion.z - 0.025 * newPosicion.z;
-	}
+	}*/
 }
 
 MiEsfera::MiEsfera(void)
@@ -72,10 +85,12 @@ MiEsfera::MiEsfera(void)
 	posicion.y=0.0f;
 	posicion.z=0.0f;
 
-	seleccionable = 1;
-	newPosicion.x = posicion.x;
-	newPosicion.y = posicion.y;
-	newPosicion.z = posicion.z;
+	seleccionable = true;
+	seleccionado = false;
+
+	newPosicion.x = 0.0f;
+	newPosicion.y = 0.0f;
+	newPosicion.z = 0.0f;
 }
 
 MiEsfera::~MiEsfera(void)

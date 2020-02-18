@@ -17,7 +17,7 @@ public:
 	MiEsfera *GetMiEsfera(int i);
 	int GetNumero();
 
-	//friend class ListasInteraccion;
+	friend class ListaInteracciones;
 
 	ListaMiEsferas(void);
 	~ListaMiEsferas(void);

@@ -23,4 +23,6 @@ public:
 	int GetIniEsquinas();
 
 	void Dibuja();
+
+	friend class Interacciones;
 };

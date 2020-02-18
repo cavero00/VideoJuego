@@ -4,6 +4,7 @@
 #include "./CuadradoSelect.h"
 #include "../variables/variables.h"
 #include "./ListaMiEsferas.h"
+#include "./ListaInteracciones.h"
 #include <GL/glut.h>
 #include <iostream>
 
@@ -19,14 +20,16 @@ private:
 	Vector3D posCursorClick;//Posicion del cursor al hacer click
 	Vector3D posCursorActual;//Posicion del cursor actual
 
-	int click = 0;//Click del raton
+	int click;//Click del raton
 
 public:
 	//Objetos manejados por Mundo
 	MiEsfera miEsfera;
 	CuadradoSelect cuadroSelect;
 
-	ListaMiEsferas Esferas;
+	ListaMiEsferas esferas;
+
+	ListaInteracciones listaInteraccion;
 
 	//Funciones a ejecutar en mundo.cpp
 	Mundo(void);
