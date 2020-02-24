@@ -21,13 +21,11 @@ void MiEsfera::SetPosicion(float ix,float iy,float iz)
 
 void MiEsfera::SetSeleccionado(bool select)
 {
-	cout<<"seleccionado-- "<<seleccionado<<"\n";
 	seleccionado = select;
 }
 
 bool MiEsfera::GetSeleccionado()
 {
-	cout<<"seleccionado-- "<<seleccionado<<"\n";
 	return(seleccionado);
 }
 

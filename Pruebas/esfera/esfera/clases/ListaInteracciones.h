@@ -2,6 +2,9 @@
 
 #include "./ListaMiEsferas.h"
 #include "./Interacciones.h"
+#include <iostream>
+
+using namespace std;
 
 class ListaInteracciones
 {

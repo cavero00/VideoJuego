@@ -5,3 +5,4 @@
 #define ALTURA_MIN        20.0f
 
 #define MAX_ESFERAS       3
+#define MAX_CUADRADO      1

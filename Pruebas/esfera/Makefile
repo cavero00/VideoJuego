@@ -19,7 +19,7 @@ VECTOR3D_O				= $(PATH_BIN)Vector3D.o
 CUADRO_SELECT_O			= $(PATH_BIN)CuadradoSelect.o
 INTERACCIONES_O			= $(PATH_BIN)Interacciones.o
 LIST_MIESFERA_O			= $(PATH_BIN)ListaMiEsferas.o
-LISTA_INTERACCIONES_O	= $(PATH_BIN)ListaInteracciones.o
+LIST_INTERACCIONES_O	= $(PATH_BIN)ListaInteracciones.o
 
 #################################################################
 #Ubicacion de los .cpp
@@ -30,7 +30,7 @@ VECTOR3D_CPP			= $(PATH_CLASSES)Vector3D.cpp
 CUADRO_SELECT_CPP		= $(PATH_CLASSES)CuadradoSelect.cpp
 INTERACCIONES_CPP		= $(PATH_CLASSES)Interacciones.cpp
 LIST_MIESFERA_CPP		= $(PATH_CLASSES)ListaMiEsferas.cpp
-LISTA_INTERACCIONES_CPP	= $(PATH_CLASSES)ListaInteracciones.cpp
+LIST_INTERACCIONES_CPP	= $(PATH_CLASSES)ListaInteracciones.cpp
 
 #################################################################
 #Ubicacion de los .h
@@ -40,7 +40,7 @@ VECTOR3D_H				= $(PATH_CLASSES)Vector3D.h
 CUADRO_SELECT_H			= $(PATH_CLASSES)CuadradoSelect.h
 INTERACCIONES_H			= $(PATH_CLASSES)Interacciones.h
 LIST_MIESFERA_H			= $(PATH_CLASSES)ListaMiEsferas.h
-LISTA_INTERACCIONES_H	= $(PATH_CLASSES)ListaInteracciones.h
+LIST_INTERACCIONES_H	= $(PATH_CLASSES)ListaInteracciones.h
 
 #################################################################
 # COMIENZAN LAS DFERENTES ACCIONES DEL MAKE
@@ -76,8 +76,8 @@ binarios/MiEsfera.o: $(MIESFERA_CPP) $(MIESFERA_H)
 binarios/Interacciones.o: $(INTERACCIONES_CPP) $(INTERACCIONES_H)
 	$(CXX) -c -o $(INTERACCIONES_O) $(INTERACCIONES_CPP)
 
-binarios/ListaInteracciones.o: $(LISTA_INTERACCIONES_CPP) $(LISTA_INTERACCIONES_H)
-	$(CXX) -c -o $(LISTA_INTERACCIONES_O) $(LISTA_INTERACCIONES_CPP)
+binarios/ListaInteracciones.o: $(LIST_INTERACCIONES_CPP) $(LIST_INTERACCIONES_H)
+	$(CXX) -c -o $(LIST_INTERACCIONES_O) $(LIST_INTERACCIONES_CPP)
 
 binarios/ListaMiEsferas.o: $(LIST_MIESFERA_CPP) $(LIST_MIESFERA_H)
 	$(CXX) -c -o $(LIST_MIESFERA_O) $(LIST_MIESFERA_CPP)
