@@ -17,6 +17,16 @@ Luego se llevan los archivos al repositorio para control de cambios
 Se suben los cambios al repo
 - git push origin <rama_sobre_la_que_subir_cambios>
 
+------------------------------------------------------------------------
+
+Para borrar ficheros/directorios del repo:
+
+------------------------------------------------------------------------
+Para borrar un archivo permanentemente del repo
+- git rm <nombre_archivo>
+
+Para borrar un archivo permanentemente del repo
+- git rm -r <nombre_directorio>
 
 ------------------------------------------------------------------------
 
