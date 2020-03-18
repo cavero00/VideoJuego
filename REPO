@@ -15,6 +15,7 @@ Luego se llevan los archivos al repositorio para control de cambios
 - git commit -m "mensaje"
 
 Se suben los cambios al repo
+NO SE SUBEN LAS ETIQUETAS CREADAS
 - git push origin <rama_sobre_la_que_subir_cambios>
 
 ------------------------------------------------------------------------
@@ -87,6 +88,8 @@ Para crear etiquetas anotadas se usa:
 Para obtener las etiquetas creadas:
 - git tag
 
+Para subir las etiquetas al repo se hace de la siguiente manera:
+- git push origin <nombre_etiqueta>
 ------------------------------------------------------------------------
 
 Reemplaza cambios locales
