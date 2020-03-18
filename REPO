@@ -81,11 +81,11 @@ Para revisar los cambios entre archivos se puede usar:
 Etiquetas
 
 ------------------------------------------------------------------------
-Se recomienda crear etiquetas para nueva version del SW, para ello:
-- git tag <etiqueta(version)> <id_commit>
+Para crear etiquetas anotadas se usa:
+- git tag -a <etiqueta(version)> -m 
 
-Para obtener el id del commit se usa:
-- git log
+Para obtener las etiquetas creadas:
+- git tag
 
 ------------------------------------------------------------------------
 
@@ -117,3 +117,7 @@ Interfaz grafica:
 
 Colores especiales para la consola
 - git config color.ui true
+
+Para obtener el id del commit se usa:
+- git log
+
