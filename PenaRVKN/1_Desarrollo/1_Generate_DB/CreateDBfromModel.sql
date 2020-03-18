@@ -1,3 +1,5 @@
+USE revolkon;
+
 # Tabla de los datos de las personas
 
 CREATE TABLE datos_personas (
